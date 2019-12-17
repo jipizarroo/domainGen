@@ -8,4 +8,21 @@ import "../style/index.scss";
 
 window.onload = function() {
   console.log("Hello Rigo from the console!");
+  var pronoun = ["the", "our"];
+  var adj = ["great", "big"];
+  var noun = ["jogger", "racoon"];
+  var sites = [];
+
+  function domain(pronoun, adj, noun) {
+    for (let i = 0; i < pronoun.length; i++) {
+      for (let x = 0; x < adj.length; x++) {
+        for (let y = 0; y < noun.length; y++) {
+          sites.push(pronoun[i] + adj[x] + noun[y] + ".com");
+        }
+      }
+    }
+    return sites;
+  }
+
+  console.log(domain(pronoun, adj, noun));
 };
